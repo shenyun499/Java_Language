@@ -41,5 +41,4 @@ public class SwitchLabel {
 	public static void main(String[] args) {
 		new Test1("练习1");
 	}
-
 }
