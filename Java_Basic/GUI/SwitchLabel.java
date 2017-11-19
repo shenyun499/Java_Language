@@ -1,48 +1,45 @@
 import javax.swing.*;
 /**
- * ×÷ÓÃ£ºµã»÷ÇĞ»»°´Å¥£¬±êÇ©ÔÚ¡°ÄãºÃ¡±ºÍ¡°ÔÙ¼û¡±Ö®¼äÇĞ»»
- * @author »ÆÖÇÑ§
+ * ä½œç”¨ï¼šç‚¹å‡»åˆ‡æ¢æŒ‰é’®ï¼Œæ ‡ç­¾åœ¨â€œä½ å¥½â€å’Œâ€œå†è§â€ä¹‹é—´åˆ‡æ¢
+ * @author é»„æ™ºå­¦
  *
  */
 import java.awt.*;
 import java.awt.event.*;
-class Test1 extends JFrame implements ActionListener
-{
+class Test1 extends JFrame implements ActionListener {
 	private JLabel label;
 	private JPanel panel;
 	private JButton jbutton;
-	public Test1(String a)
-	{
+	public Test1(String a) {
 		super(a);
 		this.setSize(300,300);
-		this.setLocationRelativeTo(null);	/*¾ÓÖĞ¶ÔÆë*/
+		this.setLocationRelativeTo(null);	/*å±…ä¸­å¯¹é½*/
 		
-		jbutton=new JButton("ÇĞ»»");
+		jbutton = new JButton("åˆ‡æ¢");
 		jbutton.addActionListener(this);
 		
-		panel=new JPanel();
+		panel = new JPanel();
 		this.setContentPane(panel);
-		label=new JLabel("ÄãºÃ");
+		label = new JLabel("ä½ å¥½");
 		panel.add(jbutton);
 		panel.add(label);
 		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
 	}
-	public void actionPerformed(ActionEvent e)
-	{
-		if(e.getSource()==jbutton)
-		{
-			if(label.getText().equals("ÄãºÃ"))
-				label.setText("ÔÙ¼û");
-			else
-				label.setText("ÄãºÃ");
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource() == jbutton) {
+			if (label.getText().equals("ä½ å¥½")) {
+				label.setText("å†è§");
+			} else {
+				label.setText("ä½ å¥½");
+			}
 		}
 	}
 }
 public class SwitchLabel {
-	public static void main(String[] args){
-		new Test1("Á·Ï°1");
+	public static void main(String[] args) {
+		new Test1("ç»ƒä¹ 1");
 	}
 
 }
