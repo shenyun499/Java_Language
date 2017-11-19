@@ -2,38 +2,36 @@ import java.awt.Font;
 import java.awt.event.*;
 import javax.swing.*;
 /**
- * ×÷ÓÃ£ºµ¥»÷µÃµ½Êó±êµÄ×ø±ê²¢ÇÒÔÚ±êÇ©ÖĞÏÔÊ¾³öÀ´
- * @author »ÆÖÇÑ§
+ * ä½œç”¨ï¼šå•å‡»å¾—åˆ°é¼ æ ‡çš„åæ ‡å¹¶ä¸”åœ¨æ ‡ç­¾ä¸­æ˜¾ç¤ºå‡ºæ¥
+ * @author é»„æ™ºå­¦
  *
  */
-public class GetMouseUseLabelShow extends JFrame implements MouseListener{
+public class GetMouseUseLabelShow extends JFrame implements MouseListener {
 	private JPanel panel;
 	private JLabel label;
-	public GetMouseUseLabelShow(String name)
-	{
+	public GetMouseUseLabelShow(String name) {
 		super(name);
-		this.setSize(500,300);
+		this.setSize(500, 300);
 		this.setLocationRelativeTo(null);
-		//´´½¨¶ÔÏó
-		panel=new JPanel();
-		label=new JLabel("Çëµã»÷Êó±ê");
-		label.setFont(new Font("",Font.BOLD,12));
-		//·ÅÖÃÃæ°å
+		//åˆ›å»ºå¯¹è±¡
+		panel = new JPanel();
+		label = new JLabel("è¯·ç‚¹å‡»é¼ æ ‡");
+		label.setFont(new Font("", Font.BOLD, 12));
+		//æ”¾ç½®é¢æ¿
 		this.setContentPane(panel);
-		//·ÅÖÃ±êÇ©
+		//æ”¾ç½®æ ‡ç­¾
 		panel.add(label);
-		//¼àÌıÊó±ê
+		//ç›‘å¬é¼ æ ‡
 		addMouseListener(this);
-		//ÉèÖÃ¿ò¼Ü¹Ø±ÕĞÔ¼°¿É¼ûĞÔ
+		//è®¾ç½®æ¡†æ¶å…³é—­æ€§åŠå¯è§æ€§
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
 	}
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		// µ¥»÷Êó±ê£¬µÃµ½Êó±ê×ø±ê£¬ÏÔÊ¾ÔÚ±êÇ©ÉÏ
-		
-		label.setText("x×ø±ê£º"+e.getX()+" y×ø±ê"+e.getY());
+		// å•å‡»é¼ æ ‡ï¼Œå¾—åˆ°é¼ æ ‡åæ ‡ï¼Œæ˜¾ç¤ºåœ¨æ ‡ç­¾ä¸Š
+		label.setText("xåæ ‡ï¼š"+e.getX()+" yåæ ‡"+e.getY());
 		
 	}
 
@@ -58,11 +56,10 @@ public class GetMouseUseLabelShow extends JFrame implements MouseListener{
 	@Override
 	public void mouseExited(MouseEvent e) {
 		// TODO Auto-generated method stub
-		label.setText("Êó±ê²»ÔÚ¿ò¼ÜÄÚ£¬ÎŞ·¨»ñµÃ×ø±ê£¡Çë°ÑÊó±êÒÆµ½¿ò¼ÜÄÚ£¬²¢µã»÷»ñÈ¡Êó±êµÄ×ø±ê¡£");
+		label.setText("é¼ æ ‡ä¸åœ¨æ¡†æ¶å†…ï¼Œæ— æ³•è·å¾—åæ ‡ï¼è¯·æŠŠé¼ æ ‡ç§»åˆ°æ¡†æ¶å†…ï¼Œå¹¶ç‚¹å‡»è·å–é¼ æ ‡çš„åæ ‡ã€‚");
 		
 	}
-	public static void main(String[] args)
-	{
-		new GetMouseUseLabelShow("µ¥»÷»ñµÃ×ø±êÖµ");
+	public static void main(String[] args) {
+		new GetMouseUseLabelShow("å•å‡»è·å¾—åæ ‡å€¼");
 	}
 }
